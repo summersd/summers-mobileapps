@@ -1,0 +1,100 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.soundsapp.MainActivity" >
+
+    <TableRow
+        android:id="@+id/tableRow1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:gravity = "center">
+
+        <ImageButton
+            android:id="@+id/buttonBell"
+            android:layout_width="128dp"
+            android:layout_height="128dp"
+            android:onClick="buttonBellClick"
+            android:scaleType="fitXY"
+            android:src="@drawable/bell" />
+
+        <ImageButton
+            android:id="@+id/buttonBubbles"
+            android:layout_width="128dp"
+            android:layout_height="128dp"
+            android:onClick="buttonBubblesClick"
+            android:scaleType="fitXY"
+            android:src="@drawable/bubbles" />
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:gravity = "center">
+
+        <ImageButton
+            android:id="@+id/buttonDoor"
+            android:layout_width="128dp"
+            android:layout_height="128dp"
+            android:onClick="buttonDoorClick"
+            android:scaleType="fitXY"
+            android:src="@drawable/door" />
+
+        <ImageButton
+            android:id="@+id/buttonPlunge"
+            android:layout_width="128dp"
+            android:layout_height="128dp"
+            android:onClick="buttonPlungeClick"
+            android:scaleType="fitXY"
+            android:src="@drawable/polarbearplunge" />
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:gravity = "center">
+
+        <ImageButton
+            android:id="@+id/buttonPop"
+            android:layout_width="128dp"
+            android:layout_height="128dp"
+            android:onClick="buttonPopClick"
+            android:scaleType="fitXY"
+            android:src="@drawable/balloonpop" />
+
+        <ImageButton
+            android:id="@+id/buttonRipples"
+            android:layout_width="128dp"
+            android:layout_height="128dp"
+            android:onClick="buttonRippleClick"
+            android:scaleType="fitXY"
+            android:src="@drawable/ripple" />
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:gravity = "center">
+
+        <Button
+            android:id="@+id/buttonStop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick = "stopAllSounds"
+            android:text="Stop Sounds" />
+
+    </TableRow>
+
+</LinearLayout>
