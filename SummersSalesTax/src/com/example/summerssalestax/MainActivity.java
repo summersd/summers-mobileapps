@@ -15,6 +15,7 @@ public class MainActivity extends Activity {
 	private TextView textTax;
 	private SeekBar seekBar;
 	private TextView textPercent;
+	private TextView textTotal;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +26,8 @@ public class MainActivity extends Activity {
 		textTax = (TextView)findViewById(R.id.textTax);
 		seekBar = (SeekBar)findViewById(R.id.seekBar);
 		textPercent = (TextView)findViewById(R.id.textPercent);
+		textTotal = (TextView)findViewById(R.id.textTotal);
+				
 		
 		// Register seekBar with a listener
 		seekBar.setMax(100);
@@ -83,6 +86,11 @@ public class MainActivity extends Activity {
 		double bill = Double.valueOf(editSale.getText().toString());
 		double tax = bill * (Double.valueOf(percent)/100);
 		String taxString = String.valueOf(tax);
+		
+		textTotal.setText(String.valueOf(bill + tax));
+		
 		return taxString;
+		
+		
 	}
 }
