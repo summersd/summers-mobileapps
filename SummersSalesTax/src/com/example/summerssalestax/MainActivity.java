@@ -90,7 +90,5 @@ public class MainActivity extends Activity {
 		textTotal.setText(String.valueOf(bill + tax));
 		
 		return taxString;
-		
-		
 	}
 }
