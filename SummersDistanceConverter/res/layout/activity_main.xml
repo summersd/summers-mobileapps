@@ -1,0 +1,55 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.summersdistanceconverter.MainActivity" >
+
+    <TableRow
+        android:id="@+id/tableRow1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <EditText
+            android:id="@+id/editDistance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10" >
+
+            <requestFocus />
+        </EditText>
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </TableRow>
+
+<RadioGroup
+    android:id="@+id/radioGroup1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <RadioButton
+        android:id="@+id/radioMiles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:onClick="handleClick"
+        android:text="Miles" />
+
+    <RadioButton
+        android:id="@+id/radioKilometers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="handleClick"
+        android:text="Kilometers" />
+</RadioGroup>
+
+</LinearLayout>
