@@ -40,6 +40,8 @@ public class MainActivity extends Activity {
 		boolean checked = ((RadioButton) v).isChecked();
 		
 		EditText text1 = (EditText)findViewById(R.id.editDistance);
+		EditText text2 = (EditText)findViewById(R.id.editArea);
+		double area = Double.parseDouble(String.valueOf(text2.getText()));
 		double distance = Double.parseDouble(String.valueOf(text1.getText()));
 		
 		//Which button was clicked
@@ -58,7 +60,37 @@ public class MainActivity extends Activity {
 			}
 			break;
 			
+		case R.id.radioAcres:
+			if (checked) {
+				String acres = acresToSm(area);
+				text2.setText(acres);
+			}
+			break;
+			
+		case R.id.radioSquareMiles:
+			if (checked) {
+				String sm = smToAcres(area);
+				text2.setText(sm);
+			}
+			break;	
 		}
+	}
+	
+	public void resetClicked(View v) {
+		EditText text1 = (EditText)findViewById(R.id.editDistance);
+		EditText text2 = (EditText)findViewById(R.id.editArea);
+		text1.setText("0");
+		text2.setText("0");
+	}
+
+	private String smToAcres(double area) {
+		double acres = area*640;
+		return String.valueOf(acres);
+	}
+
+	private String acresToSm(double area) {
+		double sm = area/640;
+		return String.valueOf(sm);
 	}
 
 	private String milesToKm(double distance) {
