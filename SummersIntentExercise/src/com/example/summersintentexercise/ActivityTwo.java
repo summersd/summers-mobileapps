@@ -40,7 +40,7 @@ public class ActivityTwo extends Activity {
 		return super.onOptionsItemSelected(item);
 	}
 	
-	public void handleclick(View v) {
+	public void handleClick(View v) {
 		Intent intent = new Intent(this,MainActivity.class);
 		startActivity(intent);
 	}
